@@ -1,71 +1,185 @@
 fileFormatVersion: 2
 guid: 682437459c957db46b27ea810c998b9c
-timeCreated: 1516871780
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Floor_Bricks_1
-    100004: Floor_Bricks_10
-    100006: Floor_Bricks_11
-    100008: Floor_Bricks_2
-    100010: Floor_Bricks_3
-    100012: Floor_Bricks_4
-    100014: Floor_Bricks_5
-    100016: Floor_Bricks_6
-    100018: Floor_Bricks_7
-    100020: Floor_Bricks_8
-    100022: Floor_Bricks_9
-    400000: //RootNode
-    400002: Floor_Bricks_1
-    400004: Floor_Bricks_10
-    400006: Floor_Bricks_11
-    400008: Floor_Bricks_2
-    400010: Floor_Bricks_3
-    400012: Floor_Bricks_4
-    400014: Floor_Bricks_5
-    400016: Floor_Bricks_6
-    400018: Floor_Bricks_7
-    400020: Floor_Bricks_8
-    400022: Floor_Bricks_9
-    2100000: IP_R_Env_Bricks_1_mtl
-    2300000: Floor_Bricks_1
-    2300002: Floor_Bricks_10
-    2300004: Floor_Bricks_11
-    2300006: Floor_Bricks_2
-    2300008: Floor_Bricks_3
-    2300010: Floor_Bricks_4
-    2300012: Floor_Bricks_5
-    2300014: Floor_Bricks_6
-    2300016: Floor_Bricks_7
-    2300018: Floor_Bricks_8
-    2300020: Floor_Bricks_9
-    3300000: Floor_Bricks_1
-    3300002: Floor_Bricks_10
-    3300004: Floor_Bricks_11
-    3300006: Floor_Bricks_2
-    3300008: Floor_Bricks_3
-    3300010: Floor_Bricks_4
-    3300012: Floor_Bricks_5
-    3300014: Floor_Bricks_6
-    3300016: Floor_Bricks_7
-    3300018: Floor_Bricks_8
-    3300020: Floor_Bricks_9
-    4300000: Floor_Bricks_1
-    4300002: Floor_Bricks_2
-    4300004: Floor_Bricks_3
-    4300006: Floor_Bricks_4
-    4300008: Floor_Bricks_5
-    4300010: Floor_Bricks_6
-    4300012: Floor_Bricks_7
-    4300014: Floor_Bricks_8
-    4300016: Floor_Bricks_9
-    4300018: Floor_Bricks_10
-    4300020: Floor_Bricks_11
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Floor_Bricks_1
+  - first:
+      1: 100004
+    second: Floor_Bricks_10
+  - first:
+      1: 100006
+    second: Floor_Bricks_11
+  - first:
+      1: 100008
+    second: Floor_Bricks_2
+  - first:
+      1: 100010
+    second: Floor_Bricks_3
+  - first:
+      1: 100012
+    second: Floor_Bricks_4
+  - first:
+      1: 100014
+    second: Floor_Bricks_5
+  - first:
+      1: 100016
+    second: Floor_Bricks_6
+  - first:
+      1: 100018
+    second: Floor_Bricks_7
+  - first:
+      1: 100020
+    second: Floor_Bricks_8
+  - first:
+      1: 100022
+    second: Floor_Bricks_9
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Floor_Bricks_1
+  - first:
+      4: 400004
+    second: Floor_Bricks_10
+  - first:
+      4: 400006
+    second: Floor_Bricks_11
+  - first:
+      4: 400008
+    second: Floor_Bricks_2
+  - first:
+      4: 400010
+    second: Floor_Bricks_3
+  - first:
+      4: 400012
+    second: Floor_Bricks_4
+  - first:
+      4: 400014
+    second: Floor_Bricks_5
+  - first:
+      4: 400016
+    second: Floor_Bricks_6
+  - first:
+      4: 400018
+    second: Floor_Bricks_7
+  - first:
+      4: 400020
+    second: Floor_Bricks_8
+  - first:
+      4: 400022
+    second: Floor_Bricks_9
+  - first:
+      21: 2100000
+    second: IP_R_Env_Bricks_1_mtl
+  - first:
+      23: 2300000
+    second: Floor_Bricks_1
+  - first:
+      23: 2300002
+    second: Floor_Bricks_10
+  - first:
+      23: 2300004
+    second: Floor_Bricks_11
+  - first:
+      23: 2300006
+    second: Floor_Bricks_2
+  - first:
+      23: 2300008
+    second: Floor_Bricks_3
+  - first:
+      23: 2300010
+    second: Floor_Bricks_4
+  - first:
+      23: 2300012
+    second: Floor_Bricks_5
+  - first:
+      23: 2300014
+    second: Floor_Bricks_6
+  - first:
+      23: 2300016
+    second: Floor_Bricks_7
+  - first:
+      23: 2300018
+    second: Floor_Bricks_8
+  - first:
+      23: 2300020
+    second: Floor_Bricks_9
+  - first:
+      33: 3300000
+    second: Floor_Bricks_1
+  - first:
+      33: 3300002
+    second: Floor_Bricks_10
+  - first:
+      33: 3300004
+    second: Floor_Bricks_11
+  - first:
+      33: 3300006
+    second: Floor_Bricks_2
+  - first:
+      33: 3300008
+    second: Floor_Bricks_3
+  - first:
+      33: 3300010
+    second: Floor_Bricks_4
+  - first:
+      33: 3300012
+    second: Floor_Bricks_5
+  - first:
+      33: 3300014
+    second: Floor_Bricks_6
+  - first:
+      33: 3300016
+    second: Floor_Bricks_7
+  - first:
+      33: 3300018
+    second: Floor_Bricks_8
+  - first:
+      33: 3300020
+    second: Floor_Bricks_9
+  - first:
+      43: 4300000
+    second: Floor_Bricks_1
+  - first:
+      43: 4300002
+    second: Floor_Bricks_2
+  - first:
+      43: 4300004
+    second: Floor_Bricks_3
+  - first:
+      43: 4300006
+    second: Floor_Bricks_4
+  - first:
+      43: 4300008
+    second: Floor_Bricks_5
+  - first:
+      43: 4300010
+    second: Floor_Bricks_6
+  - first:
+      43: 4300012
+    second: Floor_Bricks_7
+  - first:
+      43: 4300014
+    second: Floor_Bricks_8
+  - first:
+      43: 4300016
+    second: Floor_Bricks_9
+  - first:
+      43: 4300018
+    second: Floor_Bricks_10
+  - first:
+      43: 4300020
+    second: Floor_Bricks_11
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -82,6 +196,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -96,21 +211,31 @@ ModelImporter:
     globalScale: 100
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -118,10 +243,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -131,14 +259,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 100
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
