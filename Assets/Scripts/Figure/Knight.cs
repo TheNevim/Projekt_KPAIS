@@ -8,13 +8,16 @@ public class Knight : Figure
 {
     
     SlotColor color;
+    private int possibleMoves;
+    private int xNewPosition;
+    private int zNewPosition;
     //All movements from black site view
     private int BoardAttack(int xPosition, int zPosition, bool isSimulated)
     {
-        int possibleMoves = 0;
+         possibleMoves = 0;
         //Move UP RIGHT
-        int xNewPosition = xPosition + 1;
-        int zNewPosition = zPosition + 2;
+         xNewPosition = xPosition + 1;
+         zNewPosition = zPosition + 2;
 
         if (Enumerable.Range(0, 8).Contains(xNewPosition) && Enumerable.Range(0, 8).Contains(zNewPosition))
         {
@@ -23,13 +26,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -49,13 +52,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -72,13 +75,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -95,13 +98,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -118,13 +121,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -141,13 +144,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -164,13 +167,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -187,13 +190,13 @@ public class Knight : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }

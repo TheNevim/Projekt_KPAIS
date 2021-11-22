@@ -16,6 +16,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private List<Figure> _whiteFigures = new List<Figure>(); 
     
     private FigureColor playerTurn = FigureColor.White;
+
+    private int possibleMoves = 0;
     
     #region Singleton
     public static PlayerManager Instance;
@@ -104,7 +106,7 @@ public class PlayerManager : MonoBehaviour
         if (playerTurn == FigureColor.White)
         {
             playerTurn = FigureColor.Black;
-            int possibleMoves = BoardManager.Instance.Board[blackKingPosition.y][blackKingPosition.x].FigureInSlot.NumberOfPossibleMoves();
+            possibleMoves = BoardManager.Instance.Board[blackKingPosition.y][blackKingPosition.x].FigureInSlot.NumberOfPossibleMoves();
             BoardManager.Instance.Board[blackKingPosition.y][blackKingPosition.x].FigureInSlot.ClearMoves();
             if (possibleMoves == 0)
             {
@@ -119,25 +121,29 @@ public class PlayerManager : MonoBehaviour
             {
                 return true;
             }
+
+            possibleMoves = 0;
         }
         else
         {
             playerTurn = FigureColor.White;
-            int p = BoardManager.Instance.Board[whiteKingPosition.y][whiteKingPosition.x].FigureInSlot.NumberOfPossibleMoves();
+            possibleMoves = BoardManager.Instance.Board[whiteKingPosition.y][whiteKingPosition.x].FigureInSlot.NumberOfPossibleMoves();
             BoardManager.Instance.Board[blackKingPosition.y][blackKingPosition.x].FigureInSlot.ClearMoves();
-            if (p == 0)
+            if (possibleMoves == 0)
             {
                 foreach (Figure figure in WhiteFigures)
                 {
-                    p += figure.NumberOfPossibleMoves();
+                    possibleMoves += figure.NumberOfPossibleMoves();
                     figure.ClearMoves();
                 }
             }
             playerTurn = FigureColor.Black;
-            if (p == 0)
+            if (possibleMoves == 0)
             {
                 return true;
             }
+            
+            possibleMoves = 0;
         }
 
         return false;

@@ -8621,7 +8621,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 200
+  far clip plane: 80
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -14682,6 +14682,8 @@ MonoBehaviour:
   clearBuffersAfterBake: 1
   bakeAssetsInPlaceFolderPath: 
   resultPrefab: {fileID: 0}
+  resultPrefabLeaveInstanceInSceneAfterBake: 0
+  parentSceneObject: {fileID: 0}
   _meshCombiner:
     _validationLevel: 2
     _name: BatchPrefabBaker (0)-mesh
@@ -14690,8 +14692,8 @@ MonoBehaviour:
     _targetRenderer: {fileID: 603557259}
     _LOG_LEVEL: 3
     _settingsHolder: {fileID: 0}
-    _renderType: 0
     _outputOption: 0
+    _renderType: 0
     _lightmapOption: 1
     _doNorm: 1
     _doTan: 1

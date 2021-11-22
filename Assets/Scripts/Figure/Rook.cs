@@ -6,12 +6,16 @@ using UnityEngine;
 public class Rook : Figure
 {
     SlotColor color;
+
+    private int i = 0;
+
+    private int possibleMoves;
     //All movements from black site view
     int BoardAttack(int xPosition, int zPosition, bool isSimulated)
     {
-        int possibleMoves = 0;
+         possibleMoves = 0;
         //Move Right
-        for (int i = xPosition+1; i < 8; i++)
+        for (i = xPosition+1; i < 8; i++)
         {
             color = CanMoveToPositionB(i, zPosition);
             if (color == SlotColor.Default)
@@ -21,7 +25,7 @@ public class Rook : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int (i, zPosition));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -32,7 +36,7 @@ public class Rook : Figure
             if(!SimulateTurn(xPosition,zPosition,i,zPosition))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int(i, zPosition));
             }
             
             if (color == SlotColor.Red)
@@ -42,7 +46,7 @@ public class Rook : Figure
         }
         
         //Move left
-        for (int i = xPosition-1; i >= 0; i--)
+        for ( i = xPosition-1; i >= 0; i--)
         {
             color = CanMoveToPositionB(i, zPosition);
             if (color == SlotColor.Default)
@@ -52,7 +56,7 @@ public class Rook : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int(i, zPosition));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -63,7 +67,7 @@ public class Rook : Figure
             if(!SimulateTurn(xPosition,zPosition,i,zPosition))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int(i, zPosition));
             }
             
             if (color == SlotColor.Red)
@@ -73,7 +77,7 @@ public class Rook : Figure
         }
         
         //Move Down
-        for (int i = zPosition-1; i >= 0; i--)
+        for ( i = zPosition-1; i >= 0; i--)
         {
             color = CanMoveToPositionB(xPosition, i);
             if (color == SlotColor.Default)
@@ -83,7 +87,7 @@ public class Rook : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -94,7 +98,7 @@ public class Rook : Figure
             if(!SimulateTurn(xPosition,zPosition,xPosition,i))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
             }
             
             if (color == SlotColor.Red)
@@ -104,7 +108,7 @@ public class Rook : Figure
         }
         
         //Move Up
-        for (int i = zPosition+1; i < 8; i++)
+        for ( i = zPosition+1; i < 8; i++)
         {
             color = CanMoveToPositionB(xPosition, i);
             if (color == SlotColor.Default)
@@ -114,7 +118,7 @@ public class Rook : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -125,7 +129,7 @@ public class Rook : Figure
             if(!SimulateTurn(xPosition,zPosition,xPosition,i))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
             }
             
             if (color == SlotColor.Red)

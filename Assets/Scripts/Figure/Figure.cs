@@ -24,7 +24,7 @@ public class Figure : MonoBehaviour
     [SerializeField] private FigureType figureType;
     public FigureType promteToFigure;
 
-    protected List<BoardPosition> slotPositionMoves = new List<BoardPosition>();
+    protected List<Vector2Int> slotPositionMoves = new List<Vector2Int>();
 
     private Rigidbody rb;
     
@@ -78,7 +78,7 @@ public class Figure : MonoBehaviour
         
         for (int i = 0; i < slotPositionMoves.Count ; i++)
         {
-            BoardManager.Instance.SetSlotColor(slotPositionMoves[i].x,slotPositionMoves[i].z, slotPositionMoves[i].color);
+            BoardManager.Instance.SetSlotColor(slotPositionMoves[i].x,slotPositionMoves[i].y);
         }
     }
 
@@ -86,7 +86,7 @@ public class Figure : MonoBehaviour
     {
         for (int i = 0; i < slotPositionMoves.Count ; i++)
         {
-            BoardManager.Instance.SetSlotColor(slotPositionMoves[i].x,slotPositionMoves[i].z, SlotColor.Default);
+            BoardManager.Instance.SetSlotColor(slotPositionMoves[i].x,slotPositionMoves[i].y, SlotColor.Default);
         }
         slotPositionMoves.Clear();
     }
@@ -96,15 +96,21 @@ public class Figure : MonoBehaviour
         slotPositionMoves.Clear();
     }
 
+    private Figure currentFigure;
+    private Figure tmpFigure;
+    private Vector2Int KingPosition = new Vector2Int();
+    private bool isThreated = false;
+    
+    
+    
     public bool SimulateTurn(int xCurrentPos, int zCurrentPos, int xNewPos, int zNewPos)
     {
-        // Copy actual board
-        BoardManager.Instance.CopySimulatedBoard();
-        
+        isThreated = false;
+        List<Vector2Int> thrMove = new List<Vector2Int>();
+       
         //Simulate figure move (Mozem prepisat inu, moze byt problem)
-        Figure currentFigure = BoardManager.Instance.simulatedBoard[zCurrentPos][xCurrentPos].FigureInSlot;
-        Figure tmpFigure = null;
-        Vector2Int KingPosition = new Vector2Int();
+        currentFigure = BoardManager.Instance.board[zCurrentPos][xCurrentPos].FigureInSlot;
+        tmpFigure = null;
         
         if (currentFigure.figureType == FigureType.King && currentFigure.FigureColor == FigureColor.White)
         {
@@ -117,17 +123,19 @@ public class Figure : MonoBehaviour
             PlayerManager.Instance.SetKingNewPosition(xNewPos,zNewPos,currentFigure.FigureColor);
         }
         
-
         if (BoardManager.Instance.IsSlotOccupied(xNewPos, zNewPos))
         {
-            tmpFigure = BoardManager.Instance.simulatedBoard[zNewPos][xNewPos].FigureInSlot;
+            tmpFigure = BoardManager.Instance.board[zNewPos][xNewPos].FigureInSlot;
         }
-       BoardManager.Instance.simulatedBoard[zNewPos][xNewPos]
-           .SetFigureInSlot(BoardManager.Instance.simulatedBoard[zCurrentPos][xCurrentPos].FigureInSlot);
-       BoardManager.Instance.simulatedBoard[zCurrentPos][xCurrentPos].DeSetFigureInSlot();
+        else
+        {
+            tmpFigure = null;
+        }
+        
+       BoardManager.Instance.board[zNewPos][xNewPos]
+           .SetFigureInSlot(BoardManager.Instance.board[zCurrentPos][xCurrentPos].FigureInSlot);
+       BoardManager.Instance.board[zCurrentPos][xCurrentPos].DeSetFigureInSlot();
        
-       List<Vector2Int> threatMoves = new List<Vector2Int>();
-
        if (PlayerManager.Instance.PlayerTurn == FigureColor.White)
        {
            foreach (Figure figure in PlayerManager.Instance.BlackFigures)
@@ -137,22 +145,30 @@ public class Figure : MonoBehaviour
                    continue;
                }
                 figure.ShowSimulatedMove();
-                foreach (BoardPosition position in figure.slotPositionMoves)
+
+               /* foreach (Vector2Int position in figure.slotPositionMoves)
                 {
-                    threatMoves.Add(new Vector2Int(position.x,position.z));
+                    thrMove.Add(position);
+                }*/
+                
+                if (figure.slotPositionMoves.Contains(PlayerManager.Instance.WhiteKingPosition))
+                {
+                    isThreated = true;
+                    break;
                 }
+                
                 figure.slotPositionMoves.Clear();
            }
-           BoardManager.Instance.simulatedBoard[zCurrentPos][xCurrentPos]
-               .SetFigureInSlot(BoardManager.Instance.simulatedBoard[zNewPos][xNewPos].FigureInSlot);
-           BoardManager.Instance.simulatedBoard[zNewPos][xNewPos].DeSetFigureInSlot();
+           BoardManager.Instance.board[zCurrentPos][xCurrentPos]
+               .SetFigureInSlot(BoardManager.Instance.board[zNewPos][xNewPos].FigureInSlot);
+           BoardManager.Instance.board[zNewPos][xNewPos].DeSetFigureInSlot();
            if (tmpFigure != null)
            {
-               BoardManager.Instance.simulatedBoard[zNewPos][xNewPos]
+               BoardManager.Instance.board[zNewPos][xNewPos]
                    .SetFigureInSlot(tmpFigure);
            }
            
-           if (threatMoves.Contains(PlayerManager.Instance.WhiteKingPosition))
+           if (isThreated)
            {
                if (currentFigure.figureType == FigureType.King )
                {
@@ -175,22 +191,24 @@ public class Figure : MonoBehaviour
                    continue;
                }
                figure.ShowSimulatedMove();
-               foreach (BoardPosition position in figure.slotPositionMoves)
+               if (figure.slotPositionMoves.Contains(PlayerManager.Instance.BlackKingPosition))
                {
-                   threatMoves.Add(new Vector2Int(position.x,position.z));
+                   isThreated = true;
+                   break;
                }
+               
                figure.slotPositionMoves.Clear();
            }
-           BoardManager.Instance.simulatedBoard[zCurrentPos][xCurrentPos]
-               .SetFigureInSlot(BoardManager.Instance.simulatedBoard[zNewPos][xNewPos].FigureInSlot);
-           BoardManager.Instance.simulatedBoard[zNewPos][xNewPos].DeSetFigureInSlot();
+           BoardManager.Instance.board[zCurrentPos][xCurrentPos]
+               .SetFigureInSlot(BoardManager.Instance.board[zNewPos][xNewPos].FigureInSlot);
+           BoardManager.Instance.board[zNewPos][xNewPos].DeSetFigureInSlot();
            if (tmpFigure != null)
            {
-               BoardManager.Instance.simulatedBoard[zNewPos][xNewPos]
+               BoardManager.Instance.board[zNewPos][xNewPos]
                    .SetFigureInSlot(tmpFigure);
            }
            
-           if (threatMoves.Contains(PlayerManager.Instance.BlackKingPosition))
+           if (isThreated)
            {
                if (currentFigure.figureType == FigureType.King )
                {
@@ -247,18 +265,5 @@ public class Figure : MonoBehaviour
     
     #endregion
     
-}
 
-public class BoardPosition
-{
-     public int x;
-     public int z;
-     public SlotColor color;
-
-     public BoardPosition(int xPosition, int zPosition, SlotColor color)
-     {
-         this.x = xPosition;
-         this.z = zPosition;
-         this.color = color;
-     }
 }

@@ -8,13 +8,16 @@ public class Bishop : Figure
     SlotColor color;
     int xNewPosition;
     int zNewPosition;
+    private int possibleMoves;
+
+    private int i = 0;
     //All movements from black site view
     private int BoardAttack(int xPosition, int zPosition, bool isSimulated)
     {
-        int possibleMoves = 0;
+         possibleMoves = 0;
       
         //Move UP RIGHT diagonal
-        for (int i = 1; i < 8; i++)
+        for ( i = 1; i < 8; i++)
         {
             xNewPosition = xPosition + i;
             zNewPosition = zPosition + i;
@@ -29,7 +32,7 @@ public class Bishop : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -40,7 +43,7 @@ public class Bishop : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }
                 
                 if (color == SlotColor.Red)
@@ -52,7 +55,7 @@ public class Bishop : Figure
         }
         
         //Move DOWN LEFT diagonal
-        for (int i = -1; i > -8; i--)
+        for ( i = -1; i > -8; i--)
         {
             xNewPosition = xPosition + i;
             zNewPosition = zPosition + i;
@@ -68,7 +71,7 @@ public class Bishop : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -79,7 +82,7 @@ public class Bishop : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }
                 if (color == SlotColor.Red)
                 {
@@ -89,7 +92,7 @@ public class Bishop : Figure
         }
         
         //Move UP LEFT diagonal
-        for (int i = 1; i < 8; i++)
+        for ( i = 1; i < 8; i++)
         {
             xNewPosition = xPosition - i;
             zNewPosition = zPosition + i;
@@ -104,7 +107,7 @@ public class Bishop : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -115,7 +118,7 @@ public class Bishop : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }
                 if (color == SlotColor.Red)
                 {
@@ -125,7 +128,7 @@ public class Bishop : Figure
         }
         
         //Move DOWN RIGHT diagonal
-        for (int i = 1; i < 8; i++)
+        for (i = 1; i < 8; i++)
         {
             xNewPosition = xPosition + i;
             zNewPosition = zPosition - i;
@@ -140,7 +143,7 @@ public class Bishop : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -151,7 +154,7 @@ public class Bishop : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }
                 if (color == SlotColor.Red)
                 {

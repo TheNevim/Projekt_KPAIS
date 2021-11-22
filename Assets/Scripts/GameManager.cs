@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public Figure FocusedFigure => focusedFigure;
 
+    private Ray ray;
+
     #region Singleton
 
     public static GameManager Instance;
@@ -58,7 +60,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && gameIsAlive)
         {
-            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+            ray = _camera.ScreenPointToRay(Input.mousePosition);
             
             if (Physics.Raycast(ray, out var hit, 50000,(1 << 8 | 1 << 9)) && !isFigureFocused)
             {

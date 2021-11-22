@@ -5,17 +5,21 @@ using UnityEngine;
 
 public class Queen : Figure
 {
+    private int possibleMoves;
+    private int xNewPosition;
+    private int zNewPosition;
+    private int i;
     
     SlotColor color;
     //All movements from black site view
     private int BoardAttack(int xPosition, int zPosition, bool isSimulated)
     {
-        int possibleMoves = 0;
-        int xNewPosition = xPosition + 1;
-        int zNewPosition = zPosition + 2;
+         possibleMoves = 0;
+         xNewPosition = xPosition + 1;
+         zNewPosition = zPosition + 2;
         
         //Move UP RIGHT diagonal
-        for (int i = 1; i < 8; i++)
+        for ( i = 1; i < 8; i++)
         {
             xNewPosition = xPosition + i;
             zNewPosition = zPosition + i;
@@ -29,7 +33,7 @@ public class Queen : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -40,7 +44,7 @@ public class Queen : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }
                 if (color == SlotColor.Red)
                 {
@@ -50,7 +54,7 @@ public class Queen : Figure
         }
         
         //Move DOWN LEFT diagonal
-        for (int i = -1; i > -8; i--)
+        for ( i = -1; i > -8; i--)
         {
             xNewPosition = xPosition + i;
             zNewPosition = zPosition + i;
@@ -64,7 +68,7 @@ public class Queen : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -75,7 +79,7 @@ public class Queen : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }
                 if (color == SlotColor.Red)
                 {
@@ -85,7 +89,7 @@ public class Queen : Figure
         }
         
         //Move UP LEFT diagonal
-        for (int i = 1; i < 8; i++)
+        for ( i = 1; i < 8; i++)
         {
             xNewPosition = xPosition - i;
             zNewPosition = zPosition + i;
@@ -99,7 +103,7 @@ public class Queen : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -110,7 +114,7 @@ public class Queen : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 } 
                 if (color == SlotColor.Red)
                 {
@@ -120,7 +124,7 @@ public class Queen : Figure
         }
         
         //Move DOWN RIGHT diagonal
-        for (int i = 1; i < 8; i++)
+        for ( i = 1; i < 8; i++)
         {
             xNewPosition = xPosition + i;
             zNewPosition = zPosition - i;
@@ -134,7 +138,7 @@ public class Queen : Figure
                 
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     if (color == SlotColor.Red)
                     {
                         break;
@@ -145,7 +149,7 @@ public class Queen : Figure
                 if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                 {
                     possibleMoves++;
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }
                 
                 if (color == SlotColor.Red)
@@ -156,7 +160,7 @@ public class Queen : Figure
         }
         
         //Move Right
-        for (int i = xPosition+1; i < 8; i++)
+        for ( i = xPosition+1; i < 8; i++)
         {
             color = CanMoveToPositionB(i, zPosition);
             if (color == SlotColor.Default)
@@ -166,7 +170,7 @@ public class Queen : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int(i, zPosition));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -177,7 +181,7 @@ public class Queen : Figure
             if(!SimulateTurn(xPosition,zPosition,i,zPosition))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int(i, zPosition));
             }
             if (color == SlotColor.Red)
             {
@@ -186,7 +190,7 @@ public class Queen : Figure
         }
         
         //Move left
-        for (int i = xPosition-1; i >= 0; i--)
+        for ( i = xPosition-1; i >= 0; i--)
         {
             color = CanMoveToPositionB(i, zPosition);
             if (color == SlotColor.Default)
@@ -196,7 +200,7 @@ public class Queen : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int(i, zPosition));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -207,7 +211,7 @@ public class Queen : Figure
             if(!SimulateTurn(xPosition,zPosition,i,zPosition))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(i, zPosition, color));
+                slotPositionMoves.Add(new Vector2Int(i, zPosition));
             }
             
             if (color == SlotColor.Red)
@@ -217,7 +221,7 @@ public class Queen : Figure
         }
         
         //Move Down
-        for (int i = zPosition-1; i >= 0; i--)
+        for ( i = zPosition-1; i >= 0; i--)
         {
             color = CanMoveToPositionB(xPosition, i);
             if (color == SlotColor.Default)
@@ -227,7 +231,7 @@ public class Queen : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -238,7 +242,7 @@ public class Queen : Figure
             if(!SimulateTurn(xPosition,zPosition,xPosition,i))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
             }
             
             if (color == SlotColor.Red)
@@ -248,7 +252,7 @@ public class Queen : Figure
         }
         
         //Move Up
-        for (int i = zPosition+1; i < 8; i++)
+        for ( i = zPosition+1; i < 8; i++)
         {
             color = CanMoveToPositionB(xPosition, i);
             if (color == SlotColor.Default)
@@ -258,7 +262,7 @@ public class Queen : Figure
                 
             if (isSimulated)
             {
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
                 if (color == SlotColor.Red)
                 {
                     break;
@@ -269,7 +273,7 @@ public class Queen : Figure
             if(!SimulateTurn(xPosition,zPosition,xPosition,i))
             {
                 possibleMoves++;
-                slotPositionMoves.Add(new BoardPosition(xPosition, i, color));
+                slotPositionMoves.Add(new Vector2Int(xPosition, i));
             }
             if (color == SlotColor.Red)
             {

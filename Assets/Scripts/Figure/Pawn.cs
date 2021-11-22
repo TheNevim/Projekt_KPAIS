@@ -19,12 +19,15 @@ public class Pawn : Figure
     [SerializeField] GameObject queen;
     [SerializeField] GameObject rook;
 
+    private int possibleMoves;
+    private int xNewPosition;
+    private int zNewPosition;
     
     int BoardAttack(int xPosition, int zPosition, bool isSimulated)
     {
-        int possibleMoves = 0;
-        int xNewPosition = xPosition;
-        int zNewPosition = zPosition + basicMovement;
+         possibleMoves = 0;
+         xNewPosition = xPosition;
+         zNewPosition = zPosition + basicMovement;
         
          if (zNewPosition >= 0 && zNewPosition < 8)
          {
@@ -33,13 +36,13 @@ public class Pawn : Figure
              {
                  if (isSimulated)
                  {
-                     slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                     slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                  }else
                  {
                      if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                      {
                          possibleMoves++;
-                         slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                         slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                      }  
                  }
 
@@ -53,13 +56,13 @@ public class Pawn : Figure
                          if (isSimulated)
                          {
                              
-                             slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                             slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                          }else
                          {
                              if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                              {
                                  possibleMoves++;
-                                 slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                                 slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                              }  
                          }
                      }
@@ -77,13 +80,13 @@ public class Pawn : Figure
              {
                  if (isSimulated)
                  {
-                     slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                     slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                  }else
                  {
                      if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                      {
                          possibleMoves++;
-                         slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                         slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                      }  
                  }
              }
@@ -98,13 +101,13 @@ public class Pawn : Figure
              {
                  if (isSimulated)
                  {
-                     slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                     slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                  }else
                  {
                      if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                      {
                          possibleMoves++;
-                         slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                         slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                      }  
                  }
              }

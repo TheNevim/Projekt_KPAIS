@@ -6,11 +6,14 @@ using UnityEngine;
 public class King : Figure
 {
     private SlotColor color;
+    private int possibleMoves;
+    private int xNewPosition;
+    private int zNewPosition;
     private int BoardAttack(int xPosition, int zPosition, bool isSimulated)
     {
-        int possibleMoves = 0;
-        int xNewPosition = xPosition;
-        int zNewPosition = zPosition + 1;
+        possibleMoves = 0;
+        xNewPosition = xPosition;
+        zNewPosition  = zPosition + 1;
         //Move UP 
         if (zNewPosition < 8)
         {
@@ -19,13 +22,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -41,13 +44,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -63,13 +66,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -85,13 +88,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -107,13 +110,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -129,13 +132,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -151,13 +154,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }
@@ -173,13 +176,13 @@ public class King : Figure
             {
                 if (isSimulated)
                 {
-                    slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                 }else
                 {
                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
                     {
                         possibleMoves++;
-                        slotPositionMoves.Add(new BoardPosition(xNewPosition, zNewPosition, color));
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
                     }  
                 }
             }

@@ -14,9 +14,8 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private FigureSlot[] _boardRow6;
     [SerializeField] private FigureSlot[] _boardRow7;
 
-    private FigureSlot[][] board = new FigureSlot[8][];
-    public FigureSlot[][] simulatedBoard = new FigureSlot[8][];
-
+    public FigureSlot[][] board = new FigureSlot[8][];
+    
     public FigureSlot[][] Board => board;
 
     #region Singleton
@@ -49,20 +48,10 @@ public class BoardManager : MonoBehaviour
 
     void FillBoard(FigureSlot[] row, int rowNumber)
     {
-        board[rowNumber] = new FigureSlot[8];   
-        simulatedBoard[rowNumber] = new FigureSlot[8];   
+        board[rowNumber] = new FigureSlot[8];
         Array.Copy(row, board[rowNumber], 8);
     }
     
-
-    public void CopySimulatedBoard()
-    {
-        for (int i = 0; i < 8; i++)
-        {
-            Array.Copy(board[i], simulatedBoard[i], 8);
-        }
-    }
-
     public bool IsSlotOccupied(int xPosition, int zPosition, FigureColor color)
     {
         if (board[zPosition][xPosition].FigureInSlot != null && board[zPosition][xPosition].FigureInSlot.FigureColor != color)
@@ -81,9 +70,23 @@ public class BoardManager : MonoBehaviour
         return false;
     }
 
-    public void SetSlotColor(int xPosition, int zPosition, SlotColor colorSet)
+    public void SetSlotColor(int xPosition, int zPosition)
     {
-        board[zPosition][xPosition].SetColor(colorSet);
+        if (IsSlotOccupied(xPosition, zPosition))
+        {
+            board[zPosition][xPosition].SetColor(SlotColor.Red);
+        }
+        else
+        {
+            board[zPosition][xPosition].SetColor(SlotColor.Green);
+        }
+    }
+    
+    
+    public void SetSlotColor(int xPosition, int zPosition, SlotColor color)
+    {
+        board[zPosition][xPosition].SetColor(SlotColor.Default);
+
     }
     
 
@@ -97,8 +100,8 @@ public class BoardManager : MonoBehaviour
         
         if (board[zPosition][xPosition].FigureInSlot == null && board[zPosition][xPosition].IsSlotGreen())
         {
-            board[Mathf.RoundToInt(figure.gameObject.transform.position.z)][Mathf.RoundToInt(figure.gameObject.transform.position.x)].DeSetFigureInSlot();
-                
+           board[Mathf.RoundToInt(figure.gameObject.transform.position.z)][Mathf.RoundToInt(figure.gameObject.transform.position.x)].DeSetFigureInSlot();
+               
             if (figure.FigureType == FigureType.Pawn && figure.PawnPromotion(zPosition))
             {
                 StartCoroutine(Promote(figure,xPosition, zPosition));
