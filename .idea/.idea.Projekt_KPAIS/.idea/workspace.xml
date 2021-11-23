@@ -20,18 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5337fca-c1f2-479a-8626-75d1bd2291c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Packages/com.unity.test-framework.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BoardManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Bishop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Bishop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Figure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Figure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/King.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/King.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Knight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Knight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Pawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Pawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Queen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Queen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Rook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Rook.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Bishop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Bishop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Horse .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Horse .prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black King.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Pawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Pawn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Queen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Queen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Rook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Rook.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Bishop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Bishop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Horse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Horse.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White King.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Pawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Pawn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Queen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Queen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Rook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Rook.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

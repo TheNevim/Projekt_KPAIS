@@ -287,7 +287,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4016738725823382}
   - component: {fileID: 137396562096976974}
-  - component: {fileID: 568691187}
   m_Layer: 8
   m_Name: Black_Bishop_Staff
   m_TagString: Untagged
@@ -368,20 +367,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.51514995, y: 1.6471872, z: -0.20000005}
     m_Extent: {x: 0.20332992, y: 0.057822227, z: 1.0174164}
   m_DirtyAABB: 0
---- !u!64 &568691187
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464181903585426}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: b39b7c0d4195f5542905d05816289f52, type: 3}
 --- !u!1 &1469750007816568
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4977174678320770}
   - component: {fileID: 137174633197909474}
-  - component: {fileID: 1788534795157693710}
   m_Layer: 8
   m_Name: Black_Bishop_Body
   m_TagString: Untagged
@@ -538,20 +522,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000029802322, y: 1.5837028, z: -0.0062269866}
     m_Extent: {x: 0.6259999, y: 1.050484, z: 0.49130586}
   m_DirtyAABB: 0
---- !u!64 &1788534795157693710
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582826559196628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: b39b7c0d4195f5542905d05816289f52, type: 3}
 --- !u!1 &1594851165794712
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +532,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4013526227136772}
   - component: {fileID: 137203857851634096}
-  - component: {fileID: 1245742956}
   m_Layer: 8
   m_Name: Black_Bishop_Cap
   m_TagString: Untagged
@@ -645,20 +614,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 1.6162968, z: 0}
     m_Extent: {x: 0.4342608, y: 0.51868016, z: 0.3806742}
   m_DirtyAABB: 0
---- !u!64 &1245742956
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594851165794712}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: b39b7c0d4195f5542905d05816289f52, type: 3}
 --- !u!1 &1633961476015460
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +656,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4789438162639942}
   - component: {fileID: 137390225689061368}
-  - component: {fileID: 1245742955}
   m_Layer: 8
   m_Name: Black_Bishop_Leg
   m_TagString: Untagged
@@ -780,20 +734,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.21118727, z: 0}
     m_Extent: {x: 0.7, y: 0.23400006, z: 0.6999999}
   m_DirtyAABB: 0
---- !u!64 &1245742955
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711872096561296}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: b39b7c0d4195f5542905d05816289f52, type: 3}
 --- !u!1 &1728891744259254
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,8 +932,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4325847447365640}
   - component: {fileID: 95892368486361086}
-  - component: {fileID: 1245742954}
   - component: {fileID: 1245742953}
+  - component: {fileID: 6788116382717226861}
   m_Layer: 8
   m_Name: Black Bishop
   m_TagString: Untagged
@@ -1036,22 +976,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &1245742954
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966521353940116}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!114 &1245742953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,3 +997,17 @@ MonoBehaviour:
   speed: 5
   _figureColor: 1
   figureType: 1
+  promteToFigure: 0
+--- !u!65 &6788116382717226861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966521353940116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4202757, y: 3.1766465, z: 1.4729804}
+  m_Center: {x: 0.0016403496, y: 1.5771726, z: -0.01741618}

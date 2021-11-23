@@ -74,7 +74,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4251330528451306}
   - component: {fileID: 137210804020327752}
-  - component: {fileID: 1258649360}
   m_Layer: 8
   m_Name: Black_Queen_Crown
   m_TagString: Untagged
@@ -157,20 +156,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0011319816, y: 1.5657011, z: -0.03611943}
     m_Extent: {x: 0.46360984, y: 0.54015625, z: 0.46360996}
   m_DirtyAABB: 0
---- !u!64 &1258649360
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108891830412796}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 4b497902525d19542bef389c3a191406, type: 3}
 --- !u!1 &1160638806373058
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +196,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4029117990359466}
   - component: {fileID: 137368311932404510}
-  - component: {fileID: 1258649361}
   m_Layer: 8
   m_Name: Black_Queen_Body
   m_TagString: Untagged
@@ -297,20 +281,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0011346638, y: 1.6741248, z: -0.16828008}
     m_Extent: {x: 0.6762804, y: 1.1348592, z: 0.58317304}
   m_DirtyAABB: 0
---- !u!64 &1258649361
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254069012668756}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: 4b497902525d19542bef389c3a191406, type: 3}
 --- !u!1 &1306654584711256
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +291,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4100038961740842}
   - component: {fileID: 137200217785296444}
-  - component: {fileID: 1258649359}
   m_Layer: 8
   m_Name: Black_Queen_Leg
   m_TagString: Untagged
@@ -400,20 +369,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0012512207, y: 0.27705896, z: 0.00018423796}
     m_Extent: {x: 0.6874765, y: 0.22981364, z: 0.68747646}
   m_DirtyAABB: 0
---- !u!64 &1258649359
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306654584711256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: 4b497902525d19542bef389c3a191406, type: 3}
 --- !u!1 &1568967745698468
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +412,7 @@ GameObject:
   - component: {fileID: 95355972603333608}
   - component: {fileID: 1258649363}
   - component: {fileID: 1258649364}
+  - component: {fileID: 2601706022465920362}
   m_Layer: 8
   m_Name: Black Queen
   m_TagString: Untagged
@@ -536,6 +492,20 @@ MonoBehaviour:
   speed: 0
   _figureColor: 1
   figureType: 5
+  promteToFigure: 0
+--- !u!65 &2601706022465920362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587134886509290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8027081, y: 3.7760627, z: 1.7813354}
+  m_Center: {x: -0.01516068, y: 1.9055744, z: 0.024183512}
 --- !u!1 &1629519414494680
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +669,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4284033441769042}
   - component: {fileID: 137336925604311484}
-  - component: {fileID: 1258649358}
   m_Layer: 8
   m_Name: Black_Queen_Needle
   m_TagString: Untagged
@@ -779,20 +748,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.5412199, y: 0.7568316, z: 0.34855765}
     m_Extent: {x: 0.089927986, y: 0.01804632, z: 0.45247906}
   m_DirtyAABB: 0
---- !u!64 &1258649358
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725988966164524}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 4b497902525d19542bef389c3a191406, type: 3}
 --- !u!1 &1736892729325482
 GameObject:
   m_ObjectHideFlags: 0

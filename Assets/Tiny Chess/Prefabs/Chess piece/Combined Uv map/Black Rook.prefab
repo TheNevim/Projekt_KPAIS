@@ -104,7 +104,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4158354420276888}
   - component: {fileID: 137345047961766024}
-  - component: {fileID: 1035803329}
   m_Layer: 8
   m_Name: Rook_Leg
   m_TagString: Untagged
@@ -185,20 +184,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.22328588, y: 0.01211679, z: 0.0024284124}
     m_Extent: {x: 0.24340591, y: 0.722567, z: 0.72186893}
   m_DirtyAABB: 0
---- !u!64 &1035803329
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244970808554686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 86230179aad3ac34ea5f6234dbdaf755, type: 3}
 --- !u!1 &1313576998487202
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +285,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4385722379989492}
   - component: {fileID: 137122330327017190}
-  - component: {fileID: 1035803331}
   m_Layer: 8
   m_Name: Black_Rook_Spear
   m_TagString: Untagged
@@ -381,20 +365,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.97844726, y: 0.59225494, z: 0.29620785}
     m_Extent: {x: 0.06290597, y: 0.2486034, z: 0.8423931}
   m_DirtyAABB: 0
---- !u!64 &1035803331
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507655710308264}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: 86230179aad3ac34ea5f6234dbdaf755, type: 3}
 --- !u!1 &1556063561706370
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4723417831225542}
   - component: {fileID: 137961041983276132}
-  - component: {fileID: 1035803333}
   m_Layer: 8
   m_Name: Black_Rook_Helmet
   m_TagString: Untagged
@@ -555,20 +524,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.011468291, y: 1.0733116, z: 0.000415653}
     m_Extent: {x: 0.3925673, y: 0.35189426, z: 0.40284845}
   m_DirtyAABB: 0
---- !u!64 &1035803333
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627077328420738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 86230179aad3ac34ea5f6234dbdaf755, type: 3}
 --- !u!1 &1653782698329650
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +598,7 @@ GameObject:
   - component: {fileID: 4405091043149630}
   - component: {fileID: 95801572695680790}
   - component: {fileID: 1035803323}
-  - component: {fileID: 1035803322}
+  - component: {fileID: 8823167459190332325}
   m_Layer: 8
   m_Name: Black Rook
   m_TagString: Untagged
@@ -707,22 +662,20 @@ MonoBehaviour:
   speed: 0
   _figureColor: 1
   figureType: 3
---- !u!54 &1035803322
-Rigidbody:
+  promteToFigure: 0
+--- !u!65 &8823167459190332325
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699609104537690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
+  m_Size: {x: 1.7572532, y: 2.6263921, z: 1.7936807}
+  m_Center: {x: 0.021411896, y: 1.2463595, z: 0.007429719}
 --- !u!1 &1770214964854708
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +686,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4221522451498620}
   - component: {fileID: 137730170393294130}
-  - component: {fileID: 1035803330}
   m_Layer: 8
   m_Name: Rook_Body
   m_TagString: Untagged
@@ -819,20 +771,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.2490036, y: 0.011680633, z: 0.006127313}
     m_Extent: {x: 0.7443705, y: 0.64593196, z: 0.30567354}
   m_DirtyAABB: 0
---- !u!64 &1035803330
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770214964854708}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: 86230179aad3ac34ea5f6234dbdaf755, type: 3}
 --- !u!1 &1781445369710270
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +842,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4040061849399064}
   - component: {fileID: 137835163791153454}
-  - component: {fileID: 1035803332}
   m_Layer: 8
   m_Name: Black_Rook_Shield
   m_TagString: Untagged
@@ -986,20 +923,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.1595126, y: -0.5196474, z: -0.0636853}
     m_Extent: {x: 0.07204807, y: 0.39636248, z: 0.5819284}
   m_DirtyAABB: 0
---- !u!64 &1035803332
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831310660979078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: 86230179aad3ac34ea5f6234dbdaf755, type: 3}
 --- !u!1 &1844999099898628
 GameObject:
   m_ObjectHideFlags: 0

@@ -161,7 +161,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4220446160823270}
   - component: {fileID: 137176357250106636}
-  - component: {fileID: 1158862848}
   m_Layer: 8
   m_Name: White_Horse_Rider_Spear
   m_TagString: Untagged
@@ -245,20 +244,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.4996692, y: 0.78661567, z: 0.4110284}
     m_Extent: {x: 0.16799997, y: 0.16799998, z: 0.92814803}
   m_DirtyAABB: 0
---- !u!64 &1158862848
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325384614172626}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: e04484f8963dec64799d1f4a0139df06, type: 3}
 --- !u!1 &1393918380784828
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +417,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4619536122753702}
   - component: {fileID: 137108956643694856}
-  - component: {fileID: 1158862850}
   m_Layer: 8
   m_Name: White_Horse_Rider_Helmet
   m_TagString: Untagged
@@ -516,20 +500,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 1.0701222, z: 0}
     m_Extent: {x: 0.3806742, y: 0.38769662, z: 0.3806742}
   m_DirtyAABB: 0
---- !u!64 &1158862850
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572131813698098}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: e04484f8963dec64799d1f4a0139df06, type: 3}
 --- !u!1 &1582342510887508
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +510,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4600170038984724}
   - component: {fileID: 137568854770735174}
-  - component: {fileID: 1158862849}
   m_Layer: 8
   m_Name: White_Horse_Rider_Shield
   m_TagString: Untagged
@@ -620,20 +589,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5, y: 0.86621463, z: 0.0025296211}
     m_Extent: {x: 0.3, y: 0.060000002, z: 0.285317}
   m_DirtyAABB: 0
---- !u!64 &1158862849
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582342510887508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: e04484f8963dec64799d1f4a0139df06, type: 3}
 --- !u!1 &1713666239017556
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +630,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4569938135144478}
   - component: {fileID: 137082201890121668}
-  - component: {fileID: 1158862851}
   m_Layer: 8
   m_Name: White_Horse_Rider_Body
   m_TagString: Untagged
@@ -762,20 +716,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.7037152, y: -0.0011418164, z: 0.0035868585}
     m_Extent: {x: 0.72183526, y: 0.6263702, z: 0.29641318}
   m_DirtyAABB: 0
---- !u!64 &1158862851
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724361215227492}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: e04484f8963dec64799d1f4a0139df06, type: 3}
 --- !u!1 &1726353976405352
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +757,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4272270813689160}
   - component: {fileID: 137321863396284230}
-  - component: {fileID: 1158862852}
   m_Layer: 8
   m_Name: White_Horse_Leg
   m_TagString: Untagged
@@ -897,20 +836,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.21399486, y: 0.00063335896, z: 0}
     m_Extent: {x: 0.23607501, y: 0.7006895, z: 0.6999999}
   m_DirtyAABB: 0
---- !u!64 &1158862852
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771089965435600}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: e04484f8963dec64799d1f4a0139df06, type: 3}
 --- !u!1 &1808433057806494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4642851348345182}
   - component: {fileID: 137915165129975092}
-  - component: {fileID: 1158862853}
   m_Layer: 8
   m_Name: White_Horse_Body
   m_TagString: Untagged
@@ -1130,20 +1054,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.139746, y: -0.0020237118, z: 0.6073814}
     m_Extent: {x: 0.68983364, y: 0.2926821, z: 0.8692576}
   m_DirtyAABB: 0
---- !u!64 &1158862853
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878338186422858}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300010, guid: e04484f8963dec64799d1f4a0139df06, type: 3}
 --- !u!1 &1889297656855384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1190,7 @@ GameObject:
   - component: {fileID: 4783110825308572}
   - component: {fileID: 95681852045300632}
   - component: {fileID: 1158862841}
-  - component: {fileID: 1158862840}
+  - component: {fileID: 3287228128185488450}
   m_Layer: 8
   m_Name: White Horse
   m_TagString: Untagged
@@ -1345,19 +1255,16 @@ MonoBehaviour:
   _figureColor: 0
   figureType: 2
   promteToFigure: 0
---- !u!54 &1158862840
-Rigidbody:
+--- !u!65 &3287228128185488450
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985964522049728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
+  m_Size: {x: 1.5148593, y: 2.766194, z: 2.202467}
+  m_Center: {x: 0.0019782186, y: 1.2796887, z: 0.3640135}

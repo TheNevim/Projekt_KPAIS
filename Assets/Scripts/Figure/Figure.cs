@@ -25,8 +25,7 @@ public class Figure : MonoBehaviour
     public FigureType promteToFigure;
 
     protected List<Vector2Int> slotPositionMoves = new List<Vector2Int>();
-
-    private Rigidbody rb;
+    
     
     public FigureColor FigureColor
     {
@@ -38,12 +37,7 @@ public class Figure : MonoBehaviour
     {
         get => figureType;
     }
-
-    private void Start()
-    {
-        rb = gameObject.GetComponent<Rigidbody>();
-    }
-
+    
     #region BoardControlAndMovement
 
      protected SlotColor CanMoveToPositionB(int xNewPosition, int zNewPosition)
@@ -224,46 +218,12 @@ public class Figure : MonoBehaviour
        
        return false;
     }
-
     
 
     #endregion
     
     
-    #region Movement
-
-    private void FixedUpdate()
-    {
-        if (canMove)
-        {
-            Vector3 horizontalInput = new Vector3(0, 0, Input.GetAxis(_figureColor+"Horizontal"));
-            float vertialInput = Input.GetAxis(_figureColor + "Vertical");
-            rb.MovePosition(transform.position + horizontalInput * Time.deltaTime * -speed);
-
-            if (vertialInput > 0 && canJump)
-            {
-                canJump = false;
-                rb.AddForce(Vector3.up * Time.deltaTime * jumpPower , ForceMode.Impulse);
-                canDunk = true;
-                StartCoroutine("JumpCooldown");
-            }
-
-            if (vertialInput < 0 && canDunk)
-            {
-                canDunk = false;
-                rb.AddForce(Vector3.down * Time.deltaTime * dunkPower , ForceMode.Impulse);
-            }
-        }
-    }
-
-    IEnumerator JumpCooldown()
-    {
-        yield return new WaitForSeconds(1);
-        canJump = true;
-        canDunk = false;
-    }
     
-    #endregion
     
 
 }

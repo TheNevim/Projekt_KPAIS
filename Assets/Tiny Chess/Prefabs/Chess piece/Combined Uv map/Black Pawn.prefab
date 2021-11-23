@@ -72,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4696663641807636}
   - component: {fileID: 137132479882256336}
-  - component: {fileID: 213035318}
   m_Layer: 8
   m_Name: Pawn_Black_Helmet
   m_TagString: Untagged
@@ -156,20 +155,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0012256503, y: 1.0739267, z: 0}
     m_Extent: {x: 0.5533164, y: 0.38769653, z: 0.38067424}
   m_DirtyAABB: 0
---- !u!64 &213035318
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137536463355274}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: 5ed98fd8fcd922642a71289ed8ed4f37, type: 3}
 --- !u!1 &1197273832225092
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +258,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4048255864755560}
   - component: {fileID: 137145548751853246}
-  - component: {fileID: 213035316}
   m_Layer: 8
   m_Name: Pawn_Leg
   m_TagString: Untagged
@@ -354,20 +338,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.21400005, z: 0}
     m_Extent: {x: 0.7, y: 0.23400006, z: 0.6999999}
   m_DirtyAABB: 0
---- !u!64 &213035316
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374306888361096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 5ed98fd8fcd922642a71289ed8ed4f37, type: 3}
 --- !u!1 &1422633842010752
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +502,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4061759981371936}
   - component: {fileID: 137161610834612442}
-  - component: {fileID: 213035314}
   m_Layer: 8
   m_Name: Pawn_Wooden_Shield
   m_TagString: Untagged
@@ -612,20 +581,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5009238, y: 1.1905589, z: 0}
     m_Extent: {x: 0.2497853, y: 0.06555879, z: 0.275}
   m_DirtyAABB: 0
---- !u!64 &213035314
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606168866128764}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: 5ed98fd8fcd922642a71289ed8ed4f37, type: 3}
 --- !u!1 &1635253307245532
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,8 +591,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4987613164852332}
   - component: {fileID: 95025090371908968}
-  - component: {fileID: 213035308}
   - component: {fileID: 213035307}
+  - component: {fileID: 1393276106327879256}
   m_Layer: 8
   m_Name: Black Pawn
   m_TagString: Untagged
@@ -671,7 +626,7 @@ Animator:
   m_GameObject: {fileID: 1635253307245532}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5ed98fd8fcd922642a71289ed8ed4f37, type: 3}
-  m_Controller: {fileID: 9100000, guid: 03435efd305ea7a4f9b8f963240bdc72, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -680,22 +635,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &213035308
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635253307245532}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!114 &213035307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,6 +664,19 @@ MonoBehaviour:
   knight: {fileID: 1245213012106632, guid: 29f2368d4a191e44aa1d3ef930229d4d, type: 3}
   queen: {fileID: 1587134886509290, guid: c9fbf680cbbc1394890d117da10079ee, type: 3}
   rook: {fileID: 1699609104537690, guid: 790e203b43244e2488d95192da02de8e, type: 3}
+--- !u!65 &1393276106327879256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635253307245532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4839222, y: 2.3294017, z: 1.4115772}
+  m_Center: {x: -0.006700754, y: 1.0941406, z: -0.025863796}
 --- !u!1 &1657663321598226
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +687,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4797348100211010}
   - component: {fileID: 137091322458587988}
-  - component: {fileID: 213035315}
   m_Layer: 8
   m_Name: Pawn_Wooden_Club
   m_TagString: Untagged
@@ -816,20 +767,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.49211305, y: 1.0295999, z: 0.25}
     m_Extent: {x: 0.09845197, y: 0.10609773, z: 0.4191}
   m_DirtyAABB: 0
---- !u!64 &213035315
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657663321598226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: 5ed98fd8fcd922642a71289ed8ed4f37, type: 3}
 --- !u!1 &1719639624950910
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +936,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4844169724516882}
   - component: {fileID: 137067075717275896}
-  - component: {fileID: 213035317}
   m_Layer: 8
   m_Name: Pawn_Body
   m_TagString: Untagged
@@ -1084,17 +1020,3 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000029802322, y: 1.2945231, z: 0.0035868585}
     m_Extent: {x: 0.6259999, y: 0.72099984, z: 0.29641318}
   m_DirtyAABB: 0
---- !u!64 &213035317
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848837153732364}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 5ed98fd8fcd922642a71289ed8ed4f37, type: 3}
