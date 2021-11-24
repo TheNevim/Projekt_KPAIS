@@ -12,13 +12,6 @@ public class Figure : MonoBehaviour
 {
     public bool hasMoved = false;
     //public bool isKing;
-    public bool canMove;
-    public bool canJump = true;
-    public bool canDunk = false;
-
-    [SerializeField] private float jumpPower;
-    [SerializeField] private float dunkPower;
-    [SerializeField] private float speed;
     
     [SerializeField] private FigureColor _figureColor;
     [SerializeField] private FigureType figureType;
@@ -100,8 +93,7 @@ public class Figure : MonoBehaviour
     public bool SimulateTurn(int xCurrentPos, int zCurrentPos, int xNewPos, int zNewPos)
     {
         isThreated = false;
-        List<Vector2Int> thrMove = new List<Vector2Int>();
-       
+        
         //Simulate figure move (Mozem prepisat inu, moze byt problem)
         currentFigure = BoardManager.Instance.board[zCurrentPos][xCurrentPos].FigureInSlot;
         tmpFigure = null;

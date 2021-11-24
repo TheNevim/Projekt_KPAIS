@@ -109,7 +109,7 @@ public class BoardManager : MonoBehaviour
             else
             {
                 board[zPosition][xPosition].SetFigureInSlot(figure);
-                figure.gameObject.transform.position = new Vector3(xPosition,1,zPosition);
+                figure.gameObject.transform.position = new Vector3(xPosition,0,zPosition);
                 figure.HideMove();
                 figure.hasMoved = true;
 
@@ -140,7 +140,7 @@ public class BoardManager : MonoBehaviour
                 else
                 {
                     board[zPosition][xPosition].SetFigureInSlot(figure);
-                    figure.gameObject.transform.position = new Vector3(xPosition,1,zPosition);
+                    figure.gameObject.transform.position = new Vector3(xPosition,0,zPosition);
                     figure.HideMove();
                     figure.hasMoved = true;
 

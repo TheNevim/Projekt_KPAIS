@@ -26,51 +26,7 @@ public class Pawn : Figure
     int BoardAttack(int xPosition, int zPosition, bool isSimulated)
     {
          possibleMoves = 0;
-         xNewPosition = xPosition;
-         zNewPosition = zPosition + basicMovement;
         
-         if (zNewPosition >= 0 && zNewPosition < 8)
-         {
-             color = CanMoveToPositionB(xNewPosition, zNewPosition);
-             if (color != SlotColor.Default && color != SlotColor.Red)
-             {
-                 if (isSimulated)
-                 {
-                     slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
-                 }else
-                 {
-                     if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
-                     {
-                         possibleMoves++;
-                         slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
-                     }  
-                 }
-
-                 if (!hasMoved && zPosition + startMovement >= 0 && zPosition + startMovement < 8)
-                 {
-                     xNewPosition = xPosition;
-                     zNewPosition = zPosition + startMovement;
-                     color = CanMoveToPositionB(xNewPosition, zNewPosition);
-                     if (color != SlotColor.Default && color != SlotColor.Red)
-                     {
-                         if (isSimulated)
-                         {
-                             
-                             slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
-                         }else
-                         {
-                             if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
-                             {
-                                 possibleMoves++;
-                                 slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
-                             }  
-                         }
-                     }
-                 }
-                 
-             }
-         }
-         
          xNewPosition = xPosition + 1;
          zNewPosition = zPosition + basicMovement;
          if (xNewPosition < 8 && zNewPosition >= 0 && zNewPosition <8)
@@ -115,6 +71,58 @@ public class Pawn : Figure
 
          return possibleMoves;
     }
+    
+    
+    int Movement(int xPosition, int zPosition, bool isSimulated)
+    {
+        possibleMoves = 0;
+        xNewPosition = xPosition;
+        zNewPosition = zPosition + basicMovement;
+        
+        if (zNewPosition >= 0 && zNewPosition < 8)
+        {
+            color = CanMoveToPositionB(xNewPosition, zNewPosition);
+            if (color != SlotColor.Default && color != SlotColor.Red)
+            {
+                if (isSimulated)
+                {
+                    slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
+                }else
+                {
+                    if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
+                    {
+                        possibleMoves++;
+                        slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
+                    }  
+                }
+
+                if (!hasMoved && zPosition + startMovement >= 0 && zPosition + startMovement < 8)
+                {
+                    xNewPosition = xPosition;
+                    zNewPosition = zPosition + startMovement;
+                    color = CanMoveToPositionB(xNewPosition, zNewPosition);
+                    if (color != SlotColor.Default && color != SlotColor.Red)
+                    {
+                        if (isSimulated)
+                        {
+                             
+                            slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
+                        }else
+                        {
+                            if(!SimulateTurn(xPosition,zPosition,xNewPosition,zNewPosition))
+                            {
+                                possibleMoves++;
+                                slotPositionMoves.Add(new Vector2Int(xNewPosition, zNewPosition));
+                            }  
+                        }
+                    }
+                }
+                 
+            }
+        }
+        return possibleMoves;
+    }
+
 
     public override bool PawnPromotion(int zPosition)
     {
@@ -150,6 +158,7 @@ public class Pawn : Figure
         int zPosition = (int)Math.Round(position.z);
         
         BoardAttack(xPosition, zPosition, false);
+        Movement(xPosition, zPosition, false);
         ColorAvailableMoves();
     }
     
@@ -169,7 +178,7 @@ public class Pawn : Figure
         int xPosition = (int)Math.Round(position.x);
         int zPosition = (int)Math.Round(position.z);
         
-        return BoardAttack(xPosition,zPosition,false);
+        return BoardAttack(xPosition,zPosition,false) + Movement(xPosition, zPosition, false);;
     }
 }
 

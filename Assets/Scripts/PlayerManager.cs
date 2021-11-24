@@ -128,7 +128,7 @@ public class PlayerManager : MonoBehaviour
         {
             playerTurn = FigureColor.White;
             possibleMoves = BoardManager.Instance.Board[whiteKingPosition.y][whiteKingPosition.x].FigureInSlot.NumberOfPossibleMoves();
-            BoardManager.Instance.Board[blackKingPosition.y][blackKingPosition.x].FigureInSlot.ClearMoves();
+            BoardManager.Instance.Board[whiteKingPosition.y][whiteKingPosition.x].FigureInSlot.ClearMoves();
             if (possibleMoves == 0)
             {
                 foreach (Figure figure in WhiteFigures)

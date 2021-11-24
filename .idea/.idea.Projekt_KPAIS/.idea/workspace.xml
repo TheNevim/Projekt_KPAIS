@@ -22,20 +22,13 @@
     <list default="true" id="a5337fca-c1f2-479a-8626-75d1bd2291c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projekt_KPAIS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WhiteBaked/WhitePawn0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WhiteBaked/WhitePawn0.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BoardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BoardManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Figure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Figure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Bishop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Bishop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Horse .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Horse .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black King.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Pawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Pawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Queen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Queen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Rook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/Black Rook.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Bishop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Bishop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Horse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Horse.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White King.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White King.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Pawn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Pawn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Queen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Queen.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Rook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Chess/Prefabs/Chess piece/Combined Uv map/White Rook.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Figure/Pawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Figure/Pawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,16 +42,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IUManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Figure/Bishop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Figure/Knight.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Figure/Pawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Figure/King.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Figure/Rook.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Figure/Queen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BoardManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Figure/Figure.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Figure/Pawn.cs" />
       </list>
     </option>
   </component>
@@ -71,6 +64,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -105,6 +100,10 @@
       <option name="presentableId" value="Default" />
       <updated>1637600097385</updated>
       <workItem from="1637600135033" duration="8931000" />
+      <workItem from="1637694651898" duration="68000" />
+      <workItem from="1637694995484" duration="2311000" />
+      <workItem from="1637747719162" duration="2043000" />
+      <workItem from="1637750459501" duration="301000" />
     </task>
     <servers />
   </component>
@@ -123,14 +122,80 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="363" y="105" width="1173" height="592" key="find.popup" timestamp="1637607863880">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1637749779591">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779591" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1637749779590">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779590" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1637749779591">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637749779591" />
+    <state x="2373" y="133" width="1467" height="748" key="find.popup" timestamp="1637750488425">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="363" y="105" width="1173" height="592" key="find.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1637607863880" />
+    <state x="2373" y="133" width="1467" height="748" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1637750488425" />
   </component>
 </project>
